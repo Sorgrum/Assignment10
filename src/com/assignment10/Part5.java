@@ -17,18 +17,20 @@ package com.assignment10;
 import javax.swing.*;
 import java.awt.*;
 
-public class Part2 extends JPanel {
-
+public class Part5 extends JPanel {
     @Override
     public void paintComponent(Graphics g) {
         System.out.println("GraphicsPanel.paintComponent");
         int width = getWidth();
         int height = getHeight();
 
-        int gradation = height / 15;
+        int gradation = height / 16;
 
         for (int i = 0; i <= width; i += gradation) {
-            g.drawLine(0, 0, i, width - i);
+            g.drawLine(width - i, 0, width, height - i);
+            g.drawLine(width - i, height, width, i);
+            g.drawLine(0, height - i, width - i, height);
+            g.drawLine(0, height - i, i, 0);
         }
     }
 }

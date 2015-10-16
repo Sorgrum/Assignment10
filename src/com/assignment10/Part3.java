@@ -17,7 +17,7 @@ package com.assignment10;
 import javax.swing.*;
 import java.awt.*;
 
-public class Part2 extends JPanel {
+public class Part3 extends JPanel {
 
     @Override
     public void paintComponent(Graphics g) {
@@ -27,8 +27,12 @@ public class Part2 extends JPanel {
 
         int gradation = height / 15;
 
+        g.drawLine(0, 0, 0, height);
         for (int i = 0; i <= width; i += gradation) {
             g.drawLine(0, 0, i, width - i);
+            g.drawLine(0, height, width - i, width - i);
+            g.drawLine(width, 0, i, i);
+            g.drawLine(width, height, i, width - i);
         }
     }
 }

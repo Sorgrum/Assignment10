@@ -1,8 +1,21 @@
 package com.assignment10;
 
-import javax.swing.JPanel;
-import java.awt.Graphics;
-import java.awt.Color;
+/*
+*
+* Student Name: Marcelo Gheiler
+* Date: 2015-10-16
+* TA Name: Colin Pronovost
+* Assignment: 10
+* Lab Day: Monday
+* Lab Time: 5PM
+* Lab Location: CSB 703
+*
+* I affirm that I have not given or received any unauthorized help on this assignment, and that this work is my own.
+*
+*/
+
+import javax.swing.*;
+import java.awt.*;
 
 public class Part1 extends JPanel {
 

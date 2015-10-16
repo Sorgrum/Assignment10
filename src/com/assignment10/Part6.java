@@ -17,18 +17,25 @@ package com.assignment10;
 import javax.swing.*;
 import java.awt.*;
 
-public class Part2 extends JPanel {
-
+public class Part6 extends JPanel {
     @Override
     public void paintComponent(Graphics g) {
         System.out.println("GraphicsPanel.paintComponent");
         int width = getWidth();
         int height = getHeight();
 
-        int gradation = height / 15;
+        int gradation = 10;
+        int j = 0;
 
-        for (int i = 0; i <= width; i += gradation) {
-            g.drawLine(0, 0, i, width - i);
+        for (int i = 5; i < 120; i += gradation) {
+            j++;
+
+            if (j % 2 == 0) {
+                g.setColor(Color.BLUE);
+            } else {
+                g.setColor(Color.PINK);
+            }
+            g.drawOval((width / 2) - i, (height / 2) - i, i + i, i + i);
         }
     }
 }
